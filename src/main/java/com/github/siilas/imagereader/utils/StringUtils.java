@@ -1,4 +1,4 @@
-package com.github.siilas.utils;
+package com.github.siilas.imagereader.utils;
 
 public final class StringUtils {
 

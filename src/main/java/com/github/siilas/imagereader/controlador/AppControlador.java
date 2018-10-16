@@ -1,12 +1,11 @@
-package com.github.siilas.controlador;
+package com.github.siilas.imagereader.controlador;
 
 import java.util.Scanner;
 
-import com.github.siilas.arquivo.GeradorDePDF;
-import com.github.siilas.leitor.LeitorArquivo;
-import com.github.siilas.leitor.LeitorDiretorio;
-import com.github.siilas.utils.FileUtils;
-import com.github.siilas.utils.StringUtils;
+import com.github.siilas.imagereader.leitor.LeitorArquivo;
+import com.github.siilas.imagereader.leitor.LeitorDiretorio;
+import com.github.siilas.imagereader.utils.FileUtils;
+import com.github.siilas.imagereader.utils.StringUtils;
 
 public class AppControlador {
 
@@ -24,7 +23,7 @@ public class AppControlador {
 		}
 		
 		System.out.println("Gerando PDFs...");
-		new GeradorDePDF().gerar(caminho, nomeCidade);
+		//new GeradorDePDF().gerar(caminho, nomeCidade);
 		
 		System.out.println("Concluído!");
 	}

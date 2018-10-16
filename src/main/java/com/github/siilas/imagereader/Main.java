@@ -1,6 +1,6 @@
-package com.github.siilas;
+package com.github.siilas.imagereader;
 
-import com.github.siilas.controlador.AppControlador;
+import com.github.siilas.imagereader.controlador.AppControlador;
 
 public class Main {
 
@@ -8,6 +8,7 @@ public class Main {
 		try {
 			new AppControlador().run();
 		} catch (Exception e) {
+		    e.printStackTrace();
 			System.out.println("Erro: " + e.getMessage());
 		}
 	}

@@ -1,4 +1,4 @@
-package com.github.siilas.arquivo;
+package com.github.siilas.imagereader.arquivo;
 
 import java.io.File;
 
@@ -7,7 +7,8 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
-import com.github.siilas.utils.StringUtils;
+import com.github.siilas.imagereader.utils.FileUtils;
+import com.github.siilas.imagereader.utils.StringUtils;
 
 public class GeradorDePDF {
 
@@ -22,7 +23,7 @@ public class GeradorDePDF {
 			int count = 0;
 			File[] arquivos = diretorio.listFiles();
 			for (File arquivo : arquivos) {
-				if (!arquivo.getName().endsWith(".jpg") && !arquivo.getName().endsWith(".jpeg")) {
+				if (!FileUtils.isImagem(arquivo.getName())) {
 					continue;
 				}
 				size += arquivo.length();
@@ -51,10 +52,6 @@ public class GeradorDePDF {
 			e.printStackTrace();
 			throw new RuntimeException("Erro ao gerar PDF");
 		}
-	}
-
-	public static void main(String[] args) {
-		new GeradorDePDF().gerar("/home/silas/Downloads/teste", "BOCAINA");
 	}
 
 }

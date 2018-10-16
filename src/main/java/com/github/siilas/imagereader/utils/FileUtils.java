@@ -1,4 +1,4 @@
-package com.github.siilas.utils;
+package com.github.siilas.imagereader.utils;
 
 import java.io.File;
 
@@ -19,6 +19,10 @@ public final class FileUtils {
 		return arquivo.exists()
 				&& !arquivo.isDirectory()
 				&& arquivo.canRead(); 
+	}
+	
+	public static boolean isImagem(String nome) {
+	    return nome.endsWith(".jpg") || nome.endsWith(".jpeg");
 	}
 	
 }
