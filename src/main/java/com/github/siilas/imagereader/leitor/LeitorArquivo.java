@@ -9,8 +9,9 @@ public class LeitorArquivo {
 	public void ler(String caminho, String nomeCidade) {
 		File arquivo = new File(caminho);
 		RenomeadorDeArquivo renomeador = new RenomeadorDeArquivo();
-		renomeador.setUp();
+		renomeador.init();
 		renomeador.renomear(arquivo, nomeCidade);
+		renomeador.end();
 	}
 
 }
